@@ -1,12 +1,11 @@
 import React from 'react';
+import { Die } from "./Die";
 
 export const DiceList = ({ dice }) => {
 
   const diceList = dice.map((die, index) => {
     return (
-      <div className="die" key={index}>
-        {die.value} - {index}
-      </div>
+      <Die die={die} key={index} index={index} />
     )
   })
 
