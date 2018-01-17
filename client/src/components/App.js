@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../styles/App.css';
 import { AddDieButton } from './AddDieButton';
+import { addDie } from '../actions/diceActions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import DiceListContainer from "./DiceListContainer";
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -14,10 +19,21 @@ class App extends Component {
         <p className="App-intro">
           To get started, click "add a die."
         </p>
-        <AddDieButton />
+        <DiceListContainer />
+        <AddDieButton addDie={this.props.addDie}/>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {dice: state.dice}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    addDie: addDie
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

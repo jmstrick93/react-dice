@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const AddDieButton = () =>{
+export const AddDieButton = ({ addDie }) =>{
   return(
-    <button>
+    <button onClick={ addDie }>
     Add A Die
     </button>
   )

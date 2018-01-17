@@ -1,5 +1,5 @@
 export function addDie(){
   return {
-    type: 'ADD_DIE',
+    type: 'ADD_DIE'
   }
 }
