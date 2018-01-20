@@ -9,3 +9,10 @@ export function rollDice(){
     type: 'ROLL_DICE'
   }
 }
+
+export function removeDie(id){
+  return{
+    type: 'REMOVE_DIE',
+    id
+  }
+}

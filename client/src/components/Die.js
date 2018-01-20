@@ -7,6 +7,7 @@ export const Die = ({die, index}) =>{
     <div className="die" key={index}>
       <img className="die-image" height="100" width="100" src={dieImageURL} alt="die side 6" />
       <p>{die.value} - {index}</p>
+      <button>Remove</button>
     </div>
   )
 }
