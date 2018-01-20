@@ -13,11 +13,10 @@ export function diceReducer(state=[], action){
 
     case 'ROLL_DICE':
 
-      // const newState = state.dice.map((die, index) =>{
-      //   debugger;
-      //   die.value = Math.floor(Math.random() * 7)
-      //   return die
-      // })
+      const newState = state.map((die, index) =>{
+        die.value = Math.floor(Math.random() * 6)+1
+        return die
+      })
 
 
       console.log('dice rolled!')
