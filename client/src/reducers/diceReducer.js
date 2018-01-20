@@ -17,12 +17,8 @@ export function diceReducer(state=[], action){
         die.value = Math.floor(Math.random() * 6)+1
         return die
       })
-
-
       console.log('dice rolled!')
-
-
-      return state;
+      return newState;
     default:
       return state;
   }
