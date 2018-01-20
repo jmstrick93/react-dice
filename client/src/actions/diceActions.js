@@ -3,3 +3,9 @@ export function addDie(){
     type: 'ADD_DIE'
   }
 }
+
+export function rollDice(){
+  return{
+    type: 'ROLL_DICE'
+  }
+}

@@ -20,7 +20,6 @@ class App extends Component {
           To get started, click "add a die."
         </p>
         <DiceListContainer />
-        <AddDieButton addDie={this.props.addDie}/>
       </div>
     );
   }
@@ -30,10 +29,4 @@ const mapStateToProps = (state) => {
   return {dice: state.dice}
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    addDie: addDie
-  }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);

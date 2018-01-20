@@ -9,6 +9,4 @@ export const Die = ({die, index}) =>{
       <p>{die.value} - {index}</p>
     </div>
   )
-
-
 }
