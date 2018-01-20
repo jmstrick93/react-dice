@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { DiceList } from "./DiceList";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import { addDie, rollDice } from '../actions/diceActions';
+import { addDie, rollDice, removeDie } from '../actions/diceActions';
 
 class DiceListContainer extends Component {
 

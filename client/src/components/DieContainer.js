@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { DiceList } from "./DiceList";
 import { connect } from "react-redux";
 import { Die } from './Die'
-import { addDie, rollDice } from '../actions/diceActions';
+import { addDie, rollDice, removeDie } from '../actions/diceActions';
+import { bindActionCreators } from 'redux';
 
 class DieContainer extends Component {
 
@@ -20,4 +20,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(DieContainer);
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    removeDie
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DieContainer);
