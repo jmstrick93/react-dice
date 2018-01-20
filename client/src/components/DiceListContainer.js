@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import { DiceList } from "./DiceList";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import { addDie } from '../actions/diceActions';
+import { addDie, rollDice } from '../actions/diceActions';
 
 class DiceListContainer extends Component {
 
   render(){
-    const { dice } = this.props
-    const { addDie } = this.props
-    return <DiceList addDie={ addDie } dice={ dice }/>
+    const { dice, addDie, rollDice } = this.props
+    return <DiceList addDie={ addDie } rollDice={ rollDice } dice={ dice }/>
   }
 
 }
@@ -22,7 +21,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    addDie: addDie
+    addDie: addDie,
+    rollDice: rollDice
   }, dispatch);
 }
 

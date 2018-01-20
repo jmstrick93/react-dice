@@ -1,9 +1,10 @@
 import React from 'react';
 import { Die } from "./Die";
-import { AddDieButton } from './AddDieButton'
+import { AddDieButton } from './AddDieButton';
+import { RollDiceButton } from './RollDiceButton';
 
 
-export const DiceList = ({ dice, addDie }) => {
+export const DiceList = ({ dice, addDie, rollDice }) => {
 
   const diceList = dice.map((die, index) => {
     return (
@@ -14,6 +15,7 @@ export const DiceList = ({ dice, addDie }) => {
     <div className="dice-list">
       {diceList}
       <AddDieButton addDie={addDie}/>
+      <RollDiceButton rollDice ={rollDice} />
     </div>
   )
 }
