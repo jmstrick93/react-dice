@@ -11,6 +11,7 @@ export function rollDice(){
 }
 
 export function removeDie(id){
+  console.log('remove action reached')
   return{
     type: 'REMOVE_DIE',
     id

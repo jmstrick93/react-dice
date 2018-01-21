@@ -12,13 +12,16 @@ export function diceReducer(state=[], action){
       return state.concat([newDie])
 
     case 'ROLL_DICE':
-
       const newState = state.map((die, index) =>{
         die.value = Math.floor(Math.random() * 6)+1
         return die
       })
       console.log('dice rolled!')
       return newState;
+    case 'REMOVE_DIE':
+      console.log('removeDie')
+      debugger;
+      return state.filter((die, index)=> die.id !== action.id)
     default:
       return state;
   }

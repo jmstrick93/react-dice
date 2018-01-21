@@ -7,8 +7,8 @@ import { addDie, rollDice, removeDie } from '../actions/diceActions';
 class DiceListContainer extends Component {
 
   render(){
-    const { dice, addDie, rollDice } = this.props
-    return <DiceList addDie={ addDie } rollDice={ rollDice } dice={ dice }/>
+    const { dice, addDie, rollDice, removeDie} = this.props
+    return <DiceList removeDie={removeDie} addDie={ addDie } rollDice={ rollDice } dice={ dice }/>
   }
 
 }
@@ -22,7 +22,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     addDie: addDie,
-    rollDice: rollDice
+    rollDice: rollDice,
+    removeDie: removeDie
   }, dispatch);
 }
 
