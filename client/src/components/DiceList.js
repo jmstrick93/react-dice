@@ -15,7 +15,7 @@ export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
   })
   return(
     <div className="dice-list">
-      <div className="row">
+      <div className="row justify-content-center">
         {diceList}
       </div>
       <div className="row">
