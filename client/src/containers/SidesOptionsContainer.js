@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { SidesOptions } from '../components/SidesOptions'
 import { bindActionCreators } from 'redux';
-import { addSide } from '../actions/diceActions'
+import { addSide, removeSide } from '../actions/diceActions'
 import { connect } from 'react-redux'
 
 class SidesOptionsContainer extends Component {
 
   render(){
-    const {die, addSide} = this.props
+    const {die, addSide, removeSide} = this.props
     return(
-      <SidesOptions addSide={addSide} die={die} />
+      <SidesOptions removeSide={removeSide} addSide={addSide} die={die} />
     )
   }
 }
@@ -22,7 +22,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    addSide
+    addSide,
+    removeSide
   }, dispatch)
 }
 

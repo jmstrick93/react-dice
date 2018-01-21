@@ -20,10 +20,18 @@ export function removeDie(id){
 
 
 export function addSide(id) {
-  console.log('changeDie action reached:')
+  console.log('addSide action reached:')
   console.log(`id: ${id}`)
   return {
     type: 'ADD_SIDE',
+    id
+  }
+}
+export function removeSide(id) {
+  console.log('removeSide action reached:')
+  console.log(`id: ${id}`)
+  return {
+    type: 'REMOVE_SIDE',
     id
   }
 }
