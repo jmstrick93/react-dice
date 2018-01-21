@@ -9,7 +9,7 @@ class SidesOptionsContainer extends Component {
   render(){
     const {die, addSide, removeSide} = this.props
     return(
-      <SidesOptions removeSide={removeSide} addSide={addSide} die={die} />
+        <SidesOptions removeSide={removeSide} addSide={addSide} die={die} />
     )
   }
 }
