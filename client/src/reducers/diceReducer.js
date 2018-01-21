@@ -37,8 +37,7 @@ export function diceReducer(state=[], action){
       console.log('removeSide dispatched to reducer')
       return state.map((die, index) => {
 
-        if((die.id === action.id)&&(die.sides > 1)){
-          debugger;
+        if((die.id === action.id)&&(die.sides > 3)){
           return {... die, sides: die.sides-1}
         } else {
           return die

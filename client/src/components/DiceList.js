@@ -8,7 +8,7 @@ export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
 
   const diceList = dice.map((die, index) => {
     return (
-      <div className='col-auto'>
+      <div className='col-auto' key={index}>
         <DieContainer die={die} key={index} index={index} removeDie={removeDie} />
       </div>
     )
