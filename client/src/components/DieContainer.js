@@ -10,10 +10,9 @@ class DieContainer extends Component {
 
   render(){
     const { dice, index } = this.props
-    debugger;
     const die = dice[index]
     let imgURL =`images/6-sided-die/side-${die.value}.png`
-    return <Die die={die} removeDie={removeDie} imgURL={imgURL} />
+    return <Die die={die} index={index} removeDie={removeDie} imgURL={imgURL} />
   }
 }
 

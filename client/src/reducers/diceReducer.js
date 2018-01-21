@@ -20,7 +20,6 @@ export function diceReducer(state=[], action){
       return newState;
     case 'REMOVE_DIE':
       console.log('removeDie')
-      debugger;
       return state.filter((die, index)=> die.id !== action.id)
     default:
       return state;
