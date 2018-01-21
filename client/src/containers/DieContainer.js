@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Die } from './Die'
+import { Die } from '../components/Die'
 import { removeDie } from '../actions/diceActions';
 import { bindActionCreators } from 'redux';
 

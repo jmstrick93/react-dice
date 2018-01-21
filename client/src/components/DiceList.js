@@ -1,7 +1,7 @@
 import React from 'react';
 import { AddDieButton } from './AddDieButton';
 import { RollDiceButton } from './RollDiceButton';
-import DieContainer from './DieContainer';
+import DieContainer from '../containers/DieContainer';
 
 
 export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {

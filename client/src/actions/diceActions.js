@@ -16,6 +16,7 @@ export function removeDie(id){
     type: 'REMOVE_DIE',
     id
   }
+}
 
 
 export function changeDie(id, sides) {
