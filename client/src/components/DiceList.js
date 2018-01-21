@@ -15,12 +15,18 @@ export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
   })
   return(
     <div className="dice-list">
+      <div className='row justify-content-center'>
+        <div className='col'>
+          <AddDieButton addDie={addDie}/>
+        </div>
+      </div>
       <div className="row justify-content-center">
         {diceList}
       </div>
       <div className="row">
-        <div className='col'><AddDieButton addDie={addDie}/>
-        <RollDiceButton rollDice ={rollDice} /></div>
+        <div className='col'>
+          <RollDiceButton rollDice ={rollDice} />
+        </div>
       </div>
         <p>Roll Total: {rollTotal}</p>
     </div>
