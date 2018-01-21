@@ -1,6 +1,7 @@
 import React from 'react';
 import { AddDieButton } from './AddDieButton';
 import { RollDiceButton } from './RollDiceButton';
+import { StartMessage } from './StartMessage';
 import DieContainer from '../containers/DieContainer';
 
 
@@ -13,10 +14,12 @@ export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
       </div>
     )
   })
+
   return(
     <div className="dice-list">
       <div className='row justify-content-center'>
         <div className='col'>
+          <StartMessage dice={dice} />
           <AddDieButton addDie={addDie}/>
         </div>
       </div>
