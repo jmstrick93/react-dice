@@ -16,4 +16,14 @@ export function removeDie(id){
     type: 'REMOVE_DIE',
     id
   }
+
+
+export function changeDie(id, sides) {
+  console.log('changeDie action reached:')
+  console.log(`id: ${id}, sides: ${sides}`)
+  return {
+    type: 'CHANGE_DIE',
+    id,
+    sides
+  }
 }
