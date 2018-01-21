@@ -8,7 +8,7 @@ import DieContainer from './DieContainer';
 export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
 
   const diceList = dice.map((die, index) => {
-    return <Die die={die} key={index} index={index} removeDie={removeDie} />
+    return <DieContainer die={die} key={index} index={index} removeDie={removeDie} />
   })
   return(
     <div className="dice-list">

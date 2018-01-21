@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { addDie, rollDice, removeDie } from '../actions/diceActions';
 
+//only want dice list responsible for how many dice there are and calculating roll total.
+
 class DiceListContainer extends Component {
 
   render(){
