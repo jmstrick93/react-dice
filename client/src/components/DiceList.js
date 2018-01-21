@@ -5,7 +5,7 @@ import { Die } from './Die'
 import DieContainer from './DieContainer';
 
 
-export const DiceList = ({ dice, addDie, removeDie, rollDice }) => {
+export const DiceList = ({ dice, addDie, removeDie, rollDice, rollTotal }) => {
 
   const diceList = dice.map((die, index) => {
     return <Die die={die} key={index} index={index} removeDie={removeDie} />
@@ -15,6 +15,7 @@ export const DiceList = ({ dice, addDie, removeDie, rollDice }) => {
       {diceList}
       <AddDieButton addDie={addDie}/>
       <RollDiceButton rollDice ={rollDice} />
+      <p>Roll Total: {rollTotal}</p>
     </div>
   )
 }
