@@ -13,7 +13,7 @@ export function diceReducer(state=[], action){
 
     case 'ROLL_DICE':
       const newState = state.map((die, index) =>{
-        die.value = Math.floor(Math.random() * 6)+1
+        die.value = Math.floor(Math.random() * die.sides)+1
         return die
       })
       console.log('dice rolled!')
@@ -26,16 +26,24 @@ export function diceReducer(state=[], action){
     case 'ADD_SIDE':
       console.log('addSide dispatched to reducer')
       return state.map((die, index) => {
-        debugger;
         if((die.id === action.id)&&(die.sides < 6)){
-          return die.sides++
+          return {...die, sides: die.sides+1}
         } else {
           return die
         }
       })
+
     case 'REMOVE_SIDE':
       console.log('removeSide dispatched to reducer')
-      return state
+      return state.map((die, index) => {
+
+        if((die.id === action.id)&&(die.sides > 1)){
+          debugger;
+          return {... die, sides: die.sides-1}
+        } else {
+          return die
+        }
+      })
     default:
       return state;
   }
