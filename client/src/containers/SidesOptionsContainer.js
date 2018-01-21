@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 class SidesOptionsContainer extends Component {
   render(){
+    const {die} = this.props
    return (
      <div>
-     SidesOptions
+       <button>+</button>
+        <p>{die.sides} sides</p>
+       <button>-</button>
     </div>
   )
   }

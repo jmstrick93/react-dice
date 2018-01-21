@@ -18,9 +18,19 @@ export function diceReducer(state=[], action){
       })
       console.log('dice rolled!')
       return newState;
+
     case 'REMOVE_DIE':
       console.log('removeDie dispatched to reducer')
       return state.filter((die, index)=> die.id !== action.id)
+
+    case 'ADD_SIDE':
+      console.log('addSide dispatched to reducer')
+      return state.map((die, index) => {
+        if((die.id == action.id)&&(die.sides < 6)){
+          return die.sides++
+        }
+      })
+
     default:
       return state;
   }

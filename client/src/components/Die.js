@@ -7,7 +7,7 @@ export const Die = ({die, index, removeDie, imgURL}) =>{
   return(
     <div className="die" key={index}>
       <p>{die.value}</p>
-      <SidesOptionsContainer />
+      <SidesOptionsContainer die={die}/>
       <img className="die-image" height="100" width="100" src= {imgURL}  alt="die-image" />
       <br/>
       <button className='remove-die-button' onClick={handleOnClick} >

@@ -19,12 +19,11 @@ export function removeDie(id){
 }
 
 
-export function changeDie(id, sides) {
+export function addSide(id) {
   console.log('changeDie action reached:')
-  console.log(`id: ${id}, sides: ${sides}`)
+  console.log(`id: ${id}`)
   return {
-    type: 'CHANGE_DIE',
-    id,
-    sides
+    type: 'ADD_SIDE',
+    id
   }
 }
