@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DiceList } from "./DiceList";
+import { DiceList } from "../components/DiceList";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { addDie, rollDice } from '../actions/diceActions';
