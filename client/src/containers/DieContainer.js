@@ -12,7 +12,9 @@ class DieContainer extends Component {
     const { dice, index, removeDie } = this.props
     const die = dice[index]
     let imgURL =`images/6-sided-die/side-${die.value}.png`
-    return <Die die={die} index={index} removeDie={removeDie} imgURL={imgURL} />
+    return (
+      <Die die={die} index={index} removeDie={removeDie} imgURL={imgURL} />
+    )
   }
 }
 
