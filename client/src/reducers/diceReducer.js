@@ -26,11 +26,16 @@ export function diceReducer(state=[], action){
     case 'ADD_SIDE':
       console.log('addSide dispatched to reducer')
       return state.map((die, index) => {
-        if((die.id == action.id)&&(die.sides < 6)){
+        debugger;
+        if((die.id === action.id)&&(die.sides < 6)){
           return die.sides++
+        } else {
+          return die
         }
       })
-
+    case 'REMOVE_SIDE':
+      console.log('removeSide dispatched to reducer')
+      return state
     default:
       return state;
   }

@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
+import { SidesOptions } from '../components/SidesOptions'
+import { bindActionCreators } from 'redux';
+import { addSide } from '../actions/diceActions'
+import { connect } from 'react-redux'
 
 class SidesOptionsContainer extends Component {
+
   render(){
-    const {die} = this.props
-   return (
-     <div>
-       <button>+</button>
-        <p>{die.sides} sides</p>
-       <button>-</button>
-    </div>
-  )
+    const {die, addSide} = this.props
+    return(
+      <SidesOptions addSide={addSide} die={die} />
+    )
   }
 }
 
-export default SidesOptionsContainer
+const mapStateToProps = (state) => {
+  return {
+    dice: state.dice
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    addSide
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SidesOptionsContainer)
