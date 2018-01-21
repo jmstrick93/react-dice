@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import { DiceList } from "./DiceList";
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import { addDie, rollDice, removeDie } from '../actions/diceActions';
+import { addDie, rollDice } from '../actions/diceActions';
 
 //only want dice list responsible for how many dice there are and calculating roll total.
 
 class DiceListContainer extends Component {
 
   render(){
-    const { dice, addDie, rollDice, removeDie} = this.props
+    const { dice, addDie, rollDice} = this.props
     const rollTotal = Object.entries(dice).reduce((computedTotal, die) =>{
       return computedTotal + Number.parseInt(die[1].value)
     }, 0)
-    return <DiceList rollTotal={rollTotal} removeDie={removeDie} addDie={ addDie } rollDice={ rollDice } dice={ dice }/>
+    return <DiceList rollTotal={rollTotal} addDie={ addDie } rollDice={ rollDice } dice={ dice }/>
   }
 
 }
@@ -28,7 +28,6 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     addDie: addDie,
     rollDice: rollDice,
-    removeDie: removeDie
   }, dispatch);
 }
 

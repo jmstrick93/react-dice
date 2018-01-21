@@ -1,7 +1,6 @@
 import React from 'react';
 import { AddDieButton } from './AddDieButton';
 import { RollDiceButton } from './RollDiceButton';
-import { Die } from './Die'
 import DieContainer from './DieContainer';
 
 

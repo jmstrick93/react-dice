@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../styles/App.css';
-import { AddDieButton } from './AddDieButton';
-import { addDie } from '../actions/diceActions';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import DiceListContainer from "./DiceListContainer";
 
 class App extends Component {

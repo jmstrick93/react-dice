@@ -19,7 +19,7 @@ export function diceReducer(state=[], action){
       console.log('dice rolled!')
       return newState;
     case 'REMOVE_DIE':
-      console.log('removeDie')
+      console.log('removeDie dispatched to reducer')
       return state.filter((die, index)=> die.id !== action.id)
     default:
       return state;

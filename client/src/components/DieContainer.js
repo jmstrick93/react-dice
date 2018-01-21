@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Die } from './Die'
-import { addDie, rollDice, removeDie } from '../actions/diceActions';
+import { removeDie } from '../actions/diceActions';
 import { bindActionCreators } from 'redux';
 
 //each die should know its own value by connecting to the Store using its container.
@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 class DieContainer extends Component {
 
   render(){
-    const { dice, index } = this.props
+    const { dice, index, removeDie } = this.props
     const die = dice[index]
     let imgURL =`images/6-sided-die/side-${die.value}.png`
     return <Die die={die} index={index} removeDie={removeDie} imgURL={imgURL} />
@@ -25,7 +25,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    removeDie
+    removeDie: removeDie
   }, dispatch)
 }
 
