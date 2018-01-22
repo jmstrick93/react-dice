@@ -11,7 +11,7 @@ class DiceListContainer extends Component {
   render(){
     const { dice, addDie, rollDice} = this.props
     const rollTotal = Object.entries(dice).reduce((computedTotal, die) =>{
-      return computedTotal + Number.parseInt(die[1].value)
+      return computedTotal + Number.parseInt(die[1].value, 10)
     }, 0)
     return (
       <div className='row'>

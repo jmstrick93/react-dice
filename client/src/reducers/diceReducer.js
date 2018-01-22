@@ -38,7 +38,7 @@ export function diceReducer(state=[], action){
       return state.map((die, index) => {
 
         if((die.id === action.id)&&(die.sides > 3)){
-          return {... die, sides: die.sides-1}
+          return {...die, sides: die.sides-1}
         } else {
           return die
         }
