@@ -3,20 +3,27 @@ import logo from '../images/logo.svg';
 import '../styles/App.css';
 import { connect } from 'react-redux';
 import DiceListContainer from "./DiceListContainer";
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import SettingsPage from './SettingsPage'
 
 class App extends Component {
 
   render() {
     return (
+      <Router>
       <div className="App">
         <div className='container'>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to ReactDice</h1>
         </header>
-        <DiceListContainer />
+        <Switch>
+          <Route exact path="/" component={DiceListContainer}/>
+          <Route path="/settings" component={SettingsPage}/>
+        </Switch>
         </div>
       </div>
+      </Router>
     );
   }
 }
