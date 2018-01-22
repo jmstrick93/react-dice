@@ -6,6 +6,8 @@ import DiceListContainer from "./DiceListContainer";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SettingsPage from './SettingsPage';
 import RollHistoryPage from './RollHistoryPage';
+import DicePage from './DicePage';
+import { Navbar } from '../components/Navbar';
 
 class App extends Component {
 
@@ -18,8 +20,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to ReactDice</h1>
         </header>
+        <Navbar />
         <Switch>
-          <Route exact path="/" component={DiceListContainer} />
+          <Route exact path="/" component={DicePage} />
           <Route path="/history" component={RollHistoryPage} />
           <Route path="/settings" component={SettingsPage} />
         </Switch>
