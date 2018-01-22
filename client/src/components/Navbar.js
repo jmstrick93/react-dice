@@ -1,22 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Navbar = () =>{
   return (
     <nav className='navbar navbar-expand-sm'>
-      <a className='navbar-brand' href='#'>ReactDice</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <NavLink className='navbar-brand' to='/'>ReactDice</NavLink>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsingNavbar">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Dice</a>
+      <div className="collapse navbar-collapse" id="collapsingNavbar">
+        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/">Dice</NavLink>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/history">Roll History</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/settings">Settings</a>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/history">Roll History</NavLink>
           </li>
         </ul>
       </div>

@@ -4,7 +4,6 @@ import '../styles/App.css';
 import { connect } from 'react-redux';
 import DiceListContainer from "./DiceListContainer";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import SettingsPage from './SettingsPage';
 import RollHistoryPage from './RollHistoryPage';
 import DicePage from './DicePage';
 import { Navbar } from '../components/Navbar';
@@ -24,7 +23,6 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={DicePage} />
           <Route path="/history" component={RollHistoryPage} />
-          <Route path="/settings" component={SettingsPage} />
         </Switch>
         </div>
       </div>
