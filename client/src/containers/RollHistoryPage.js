@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
+import { fetchRollHistory } from '../actions/diceActions';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
 class RollHistoryPage extends Component {
+
+  componentDidMount() {
+    this.props.fetchRollHistory();
+  }
+
   render(){
+    const {rollHistory} = this.props
     return(
-      <h1>Roll History</h1>
+      <div>
+        <h1>Roll History</h1>
+
+      </div>
+
+
+
     )
   }
 }
 
-export default RollHistoryPage;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    fetchRollHistory: fetchRollHistory
+  }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(RollHistoryPage);
