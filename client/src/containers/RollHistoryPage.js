@@ -11,15 +11,13 @@ class RollHistoryPage extends Component {
   }
 
   render(){
-    
     return(
-      <div>
-        <h1>Roll History</h1>
-        <RollHistoryList rollHistory={this.props.rollHistory}/>
+      <div className='row'>
+        <div className='col-8 offset-md-2'>
+          <h1>Roll History</h1>
+          <RollHistoryList rollHistory={this.props.rollHistory}/>
+        </div>
       </div>
-
-
-
     )
   }
 }

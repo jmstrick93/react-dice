@@ -1,33 +1,26 @@
 import React from 'react';
 
 export const RollHistoryList = ({rollHistory}) => {
-  debugger;
   const rollList = rollHistory.map((roll, index) => {
-    debugger;
     const diceList = roll.dice.map((die, index) => {
-      debugger;
       return(
-        <li key={index}>
-          <p>Sides: {die.sides}</p>
-          <p>Value: {die.value}</p>
-        </li>
+        <li className='text-justify'>Sides: {die.sides}, Value: {die.value}</li>
       )
     })
-    debugger;
     return(
-      <li key={index}>
-        <h4>ID: {roll.id}</h4>
-        <p>Dice: </p>
+      <li className='list-group-item' key={index}>
+        <h4 className='text-justify'>ID: {roll.id}</h4>
+        <p className='text-justify'>Dice: </p>
           <ul>
             {diceList}
           </ul>
-        <p>Total</p>
+        <p className='text-justify'>Total: </p>
       </li>
     )
   })
   return(
     <div>
-      <ol>
+      <ol className='list-group'>
         {rollList}
       </ol>
     </div>
