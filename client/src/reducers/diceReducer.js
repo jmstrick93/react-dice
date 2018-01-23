@@ -43,9 +43,6 @@ export function diceReducer(state=[], action){
           return die
         }
       })
-    case 'FETCH_ROLL_HISTORY':
-      console.log('displayRollHistory dispatched to reducer')
-      return state
     default:
       return state;
   }

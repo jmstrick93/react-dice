@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { fetchRollHistory } from '../actions/diceActions';
+import { fetchRollHistory } from '../actions/rollHistoryActions';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { RollHistoryList } from '../components/RollHistoryList';
 
 class RollHistoryPage extends Component {
 
@@ -14,7 +15,7 @@ class RollHistoryPage extends Component {
     return(
       <div>
         <h1>Roll History</h1>
-
+        <RollHistoryList rollHistory={rollHistory}/>
       </div>
 
 
@@ -23,10 +24,19 @@ class RollHistoryPage extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return(
+    {
+      dice: state.dice,
+      rollHistory: state.rollHistory
+    }
+  )
+}
+
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     fetchRollHistory: fetchRollHistory
   }, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(RollHistoryPage);
+export default connect(mapStateToProps, mapDispatchToProps)(RollHistoryPage);
