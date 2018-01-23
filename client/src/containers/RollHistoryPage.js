@@ -11,11 +11,11 @@ class RollHistoryPage extends Component {
   }
 
   render(){
-    const {rollHistory} = this.props
+    
     return(
       <div>
         <h1>Roll History</h1>
-        <RollHistoryList rollHistory={rollHistory}/>
+        <RollHistoryList rollHistory={this.props.rollHistory}/>
       </div>
 
 
