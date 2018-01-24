@@ -6,6 +6,9 @@ export function rollHistoryReducer(state=[], action){
       console.log('displayRollHistory dispatched to reducer')
       return action.rolls;
 
+    case 'SAVE_ROLL_HISTORY':
+      return state;
+
     default:
       return state;
     }
