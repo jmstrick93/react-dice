@@ -3,7 +3,7 @@ require 'pry'
 class DiceController < ApplicationController
 
   def fetch_roll_history
-    @rolls = Roll.all
+    @rolls = Roll.limit(10).reverse_order
     render json: @rolls
   end
 

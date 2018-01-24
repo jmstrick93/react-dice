@@ -4,10 +4,10 @@ body {
   font-family: sans-serif;
 }
 
-.reversed {
+/*.reversed {
   transform: rotate(180deg)
 }
 
 .reversed > li {
   transform: rotate(-180deg)
-}
+}*/
