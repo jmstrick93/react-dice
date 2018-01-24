@@ -3,3 +3,11 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.reversed {
+  transform: rotate(180deg)
+}
+
+.reversed > li {
+  transform: rotate(-180deg)
+}

@@ -4,7 +4,7 @@ export const RollHistoryList = ({rollHistory}) => {
   const rollList = rollHistory.map((roll, index) => {
     const diceList = roll.dice.map((die, index) => {
       return(
-        <li className='text-justify'>Sides: {die.sides}, Value: {die.value}</li>
+        <li key = {index} className='text-justify'>Sides: {die.sides}, Value: {die.value}</li>
       )
     })
     return(
@@ -20,7 +20,7 @@ export const RollHistoryList = ({rollHistory}) => {
   })
   return(
     <div>
-      <ol className='list-group'>
+      <ol className='list-group reversed' reversed>
         {rollList}
       </ol>
     </div>
