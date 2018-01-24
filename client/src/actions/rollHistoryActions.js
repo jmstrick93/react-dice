@@ -8,3 +8,15 @@ export function fetchRollHistory(){
     .then(rolls => dispatch({type: 'FETCH_ROLL_HISTORY', rolls}))
   }
 }
+
+export function postRollHistory(roll){
+  fetch('/api/rollHistory', {
+    method: "post",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(roll)
+  })
+  return {type: 'POST_ROLL_HISTORY'}
+}
