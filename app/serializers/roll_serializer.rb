@@ -1,3 +1,3 @@
 class RollSerializer < ActiveModel::Serializer
-  attributes :id, :dice
+  attributes :id, :dice, :total
 end
