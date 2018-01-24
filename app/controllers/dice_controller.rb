@@ -1,3 +1,5 @@
+require 'pry'
+
 class DiceController < ApplicationController
 
   def fetch_roll_history
@@ -6,7 +8,10 @@ class DiceController < ApplicationController
   end
 
   def post_roll_history
-    
+
+  @roll = Roll.new(dice: params[:dice])
+  @roll.save
+
   end
 
 end

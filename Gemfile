@@ -26,7 +26,9 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 gem 'foreman', '~> 0.84'
 
-gem 'active_model_serializers';
+gem 'active_model_serializers'
+
+gem 'pry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

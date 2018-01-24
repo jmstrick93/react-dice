@@ -20,7 +20,6 @@ class DiceListContainer extends Component {
 
       let index = 0
       for (const die of this.props.dice){
-        debugger;
         if (die.sides !== prevProps.dice[index].sides) {
           sidesChange = true;
           break;

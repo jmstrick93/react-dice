@@ -1,4 +1,4 @@
 class Roll < ApplicationRecord
   validates :dice, presence: :true
-  serialize :dice
+  serialize :dice, Array
 end
