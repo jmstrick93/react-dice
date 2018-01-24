@@ -10,13 +10,20 @@ export function fetchRollHistory(){
 }
 
 export function postRollHistory(roll){
+
+  const rollTotal = roll.reduce((computedTotal, die) =>{
+    return computedTotal + Number.parseInt(die.value, 10)
+  }, 0)
+
+  debugger;
+
   fetch('/api/rollHistory', {
     method: "post",
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({dice: roll})
+    body: JSON.stringify({dice: roll, total: rollTotal})
   })
   return {type: 'POST_ROLL_HISTORY'}
 }

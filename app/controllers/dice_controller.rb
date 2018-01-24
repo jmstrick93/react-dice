@@ -9,7 +9,7 @@ class DiceController < ApplicationController
 
   def post_roll_history
 
-  @roll = Roll.new(dice: params[:dice])
+  @roll = Roll.new(dice: params[:dice], total: params[:total])
   @roll.save
 
   end

@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const RollHistoryList = ({rollHistory}) => {
+  debugger;
   const rollList = rollHistory.map((roll, index) => {
     const diceList = roll.dice.map((die, index) => {
       return(
@@ -14,7 +15,7 @@ export const RollHistoryList = ({rollHistory}) => {
           <ul>
             {diceList}
           </ul>
-        <p className='text-justify'>Total: </p>
+        <p className='text-justify'>Total: {roll.total} </p>
       </li>
     )
   })
